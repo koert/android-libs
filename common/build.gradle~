@@ -1,0 +1,30 @@
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'gradle'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+  compile "com.google.android:android:1.6_r2"
+  testCompile "junit:junit:4.8.1"
+  testCompile "org.jmock:jmock:2.5.1"
+  testCompile "org.jmock:jmock-legacy:2.5.1"
+  testCompile "org.jmock:jmock-junit4:2.5.1"
+}
+
+// Configure the repository
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri("pomRepo"))
+        }
+    }
+}
+
+
