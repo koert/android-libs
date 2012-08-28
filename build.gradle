@@ -1,0 +1,40 @@
+
+subprojects {
+    apply plugin: 'maven'
+    apply plugin: 'java'
+    
+    group = 'net.kazed.android'
+    version = '2.0.2-SNAPSHOT'
+
+    dependencies {
+      compile "com.google.android:android:1.6_r2"
+      testCompile "junit:junit:4.8.1"
+      testCompile "org.jmock:jmock:2.5.1"
+      testCompile "org.jmock:jmock-legacy:2.5.1"
+      testCompile "org.jmock:jmock-junit4:2.5.1"
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+/*    
+    uploadArchives {
+      repositories {
+        mavenDeployer {
+            pom.project {
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        distribution 'repo'
+                    }
+                }
+            }
+        }
+      }
+    }    
+*/
+}
+
+
