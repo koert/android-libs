@@ -3,10 +3,10 @@ subprojects {
     apply plugin: 'java'
 
     group = 'net.kazed.android'
-    version = '2.0.2'
+    version = '2.1.0-SNAPSHOT'
 
     dependencies {
-      compile "com.google.android:android:1.6_r2"
+      compile "com.google.android:android:4.0.1.2"
       testCompile "junit:junit:4.8.1"
       testCompile "org.jmock:jmock:2.5.1"
       testCompile "org.jmock:jmock-legacy:2.5.1"
